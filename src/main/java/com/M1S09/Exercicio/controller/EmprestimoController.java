@@ -24,4 +24,9 @@ public class EmprestimoController {
     public Emprestimo salvar(@RequestBody Emprestimo emprestimo){
         return service.salvar(emprestimo);
     }
+
+    @DeleteMapping("/{id}")
+    public void removerPorId(@PathVariable Long id){
+        service.removerPorId(id);
+    }
 }

@@ -24,4 +24,9 @@ public class VisitanteController {
     public Visitante salvar(@RequestBody Visitante visitante){
         return service.salvar(visitante);
     }
+
+    @DeleteMapping("/{id}")
+    public void removerPorId(@PathVariable Long id){
+        service.removerPorId(id);
+    }
 }

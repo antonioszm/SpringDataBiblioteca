@@ -22,4 +22,9 @@ public class LivroController {
     public Livro salvar(@RequestBody Livro livro){
         return service.salvar(livro);
     }
+
+    @DeleteMapping("/{id}")
+    public void removerPorId(@PathVariable Long id){
+        service.removerPorId(id);
+    }
 }

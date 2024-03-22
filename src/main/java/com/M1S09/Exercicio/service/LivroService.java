@@ -20,4 +20,8 @@ public class LivroService {
     public Livro salvar(Livro livro){
         return repository.save(livro);
     }
+
+    public void removerPorId(Long id){
+        repository.deleteById(id);
+    }
 }

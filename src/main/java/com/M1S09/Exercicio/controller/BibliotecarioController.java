@@ -24,4 +24,9 @@ public class BibliotecarioController {
     public Bibliotecario salvar(@RequestBody Bibliotecario bibliotecario){
         return service.salvar(bibliotecario);
     }
+
+    @DeleteMapping("/{id}")
+    public void removerPorId(@PathVariable Long id){
+        service.removerPorId(id);
+    }
 }

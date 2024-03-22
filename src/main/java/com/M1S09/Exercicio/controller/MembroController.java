@@ -24,4 +24,10 @@ public class MembroController {
     public Membro salvar(@RequestBody Membro membro){
         return service.salvar(membro);
     }
+
+    @DeleteMapping("/{id}")
+    public void removerPorId(@PathVariable Long id){
+        service.removerPorId(id);
+    }
+
 }

@@ -22,4 +22,8 @@ public class VisitanteService {
     public Visitante salvar(Visitante visitante){
         return repository.save(visitante);
     }
+
+    public void removerPorId(Long id){
+        repository.deleteById(id);
+    }
 }

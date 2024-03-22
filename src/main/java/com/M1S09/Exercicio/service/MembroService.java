@@ -22,4 +22,8 @@ public class MembroService {
     public Membro salvar(Membro membro){
         return repository.save(membro);
     }
+
+    public void removerPorId(Long id){
+        repository.deleteById(id);
+    }
 }
