@@ -26,4 +26,8 @@ public class VisitanteService {
     public void removerPorId(Long id){
         repository.deleteById(id);
     }
+
+    public int atualizar(Visitante visitante){
+        return repository.update(visitante.getId(), visitante.getNome(), visitante.getTelefone());
+    }
 }

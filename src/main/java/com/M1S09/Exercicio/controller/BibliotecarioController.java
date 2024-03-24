@@ -2,6 +2,7 @@ package com.M1S09.Exercicio.controller;
 
 import com.M1S09.Exercicio.entities.Bibliotecario;
 import com.M1S09.Exercicio.entities.Livro;
+import com.M1S09.Exercicio.entities.Visitante;
 import com.M1S09.Exercicio.service.BibliotecarioService;
 import com.M1S09.Exercicio.service.LivroService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,10 @@ public class BibliotecarioController {
     @DeleteMapping("/{id}")
     public void removerPorId(@PathVariable Long id){
         service.removerPorId(id);
+    }
+
+    @PutMapping
+    public int atualizar(@RequestBody Bibliotecario bibliotecario){
+        return service.atualizar(bibliotecario);
     }
 }

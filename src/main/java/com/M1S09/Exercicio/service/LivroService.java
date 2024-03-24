@@ -24,4 +24,8 @@ public class LivroService {
     public void removerPorId(Long id){
         repository.deleteById(id);
     }
+
+    public int atualizar(Livro livro){
+        return repository.update(livro.getId(), livro.getAnoDePublicacao(), livro.getAutor(), livro.getTitulo());
+    }
 }

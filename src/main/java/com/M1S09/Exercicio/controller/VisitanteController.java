@@ -29,4 +29,9 @@ public class VisitanteController {
     public void removerPorId(@PathVariable Long id){
         service.removerPorId(id);
     }
+
+    @PutMapping
+    public int atualizar(@RequestBody Visitante visitante){
+        return service.atualizar(visitante);
+    }
 }

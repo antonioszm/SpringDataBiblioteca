@@ -1,5 +1,6 @@
 package com.M1S09.Exercicio.service;
 
+import com.M1S09.Exercicio.entities.Bibliotecario;
 import com.M1S09.Exercicio.entities.Emprestimo;
 import com.M1S09.Exercicio.entities.Visitante;
 import com.M1S09.Exercicio.repository.EmprestimoRepository;
@@ -25,5 +26,9 @@ public class EmprestimoService {
 
     public void removerPorId(Long id){
         repository.deleteById(id);
+    }
+
+    public int atualizar(Emprestimo emprestimo){
+        return repository.update(emprestimo.getId(), emprestimo.getDataDevolucao(), emprestimo.getDataEmprestimo(), emprestimo.getId_livro().getId(), emprestimo.getId_membro().getId());
     }
 }

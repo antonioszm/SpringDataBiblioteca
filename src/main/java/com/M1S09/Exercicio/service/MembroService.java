@@ -1,6 +1,7 @@
 package com.M1S09.Exercicio.service;
 
 import com.M1S09.Exercicio.entities.Bibliotecario;
+import com.M1S09.Exercicio.entities.Livro;
 import com.M1S09.Exercicio.entities.Membro;
 import com.M1S09.Exercicio.repository.BibliotecarioRepository;
 import com.M1S09.Exercicio.repository.MembroRepository;
@@ -25,5 +26,9 @@ public class MembroService {
 
     public void removerPorId(Long id){
         repository.deleteById(id);
+    }
+
+    public int atualizar(Membro membro){
+        return repository.update(membro.getId(), membro.getNome(), membro.getEndereco(), membro.getTelefone());
     }
 }

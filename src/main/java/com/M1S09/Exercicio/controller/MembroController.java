@@ -1,6 +1,7 @@
 package com.M1S09.Exercicio.controller;
 
 import com.M1S09.Exercicio.entities.Bibliotecario;
+import com.M1S09.Exercicio.entities.Livro;
 import com.M1S09.Exercicio.entities.Membro;
 import com.M1S09.Exercicio.service.BibliotecarioService;
 import com.M1S09.Exercicio.service.MembroService;
@@ -30,4 +31,8 @@ public class MembroController {
         service.removerPorId(id);
     }
 
+    @PutMapping
+    public int atualizar(@RequestBody Membro membro){
+        return service.atualizar(membro);
+    }
 }

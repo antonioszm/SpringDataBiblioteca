@@ -27,4 +27,9 @@ public class LivroController {
     public void removerPorId(@PathVariable Long id){
         service.removerPorId(id);
     }
+
+    @PutMapping
+    public int atualizar(@RequestBody Livro livro){
+        return service.atualizar(livro);
+    }
 }

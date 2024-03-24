@@ -1,5 +1,6 @@
 package com.M1S09.Exercicio.controller;
 
+import com.M1S09.Exercicio.entities.Bibliotecario;
 import com.M1S09.Exercicio.entities.Emprestimo;
 import com.M1S09.Exercicio.entities.Visitante;
 import com.M1S09.Exercicio.service.EmprestimoService;
@@ -28,5 +29,9 @@ public class EmprestimoController {
     @DeleteMapping("/{id}")
     public void removerPorId(@PathVariable Long id){
         service.removerPorId(id);
+    }
+    @PutMapping
+    public int atualizar(@RequestBody Emprestimo emprestimo){
+        return service.atualizar(emprestimo);
     }
 }
